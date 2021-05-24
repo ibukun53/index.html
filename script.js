@@ -14,7 +14,7 @@ Hello Yaakov
 Good Bye John
 Good Bye Jen
 Good Bye Jason
-Hello Paul
+Hello Pauls
 Hello Frank
 Hello Larry
 Hello Paula
@@ -35,10 +35,20 @@ WARNING!!! WARNING!!!
 // (Note, Step 2 will be done in the SpeakHello.js file.)
 (function (name) {
   console.log("Hello "+ name);
-})("J");
+})("John");
 
+var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry",
+ "Paula", "Laura", "Jim"];
+for (var i = 0; i < names.length; i++) {
+  var firstLetter = names[i].charAt(0).toLowerCase();
+  if (firstLetter === 'j') {
+    byeSpeaker.speak(names[i]);
+  } else {
+    helloSpeaker.speak(names[i]);
+  }
+}
 
-
+})();
 
 // STEP 10: (NOTHING TO DO. ALREADY DONE FOR YOU)
 // Loop over the names array and say either 'Hello' or "Good Bye"
